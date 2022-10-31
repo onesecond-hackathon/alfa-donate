@@ -1,33 +1,31 @@
 const file = require("fs") 
 
-const membersFilePath = '../data/members.json'
-const membersBkpFilePath = '../data/members.json.bkp'
+function SaveMember(member)
+{
+    let members = file.open("./data/members.json")
 
-let members = file.readFileSync(membersFilePath, 'utf-8')
-members = JSON.parse(members)
+    // if (!members)
+    //     members = file.file
 
-// Add sockets
+    file.writeFileSync(members,JSON.parse(member))
+}
+
 function NewMember(data)
 {
     let tbl = JSON.parse(data)
 
     if (tbl.login && tbl.password)
     {
-        let member = {}
+        let member = []
 
         member.login = tbl.login
         member.password = tbl.password
 
-        members.push(member)
+        SaveMember(member)
     }
 }
 
 setInterval(function()
 {
-    file.writeFileSync(membersFilePath, JSON.stringify(membersFilePath), 'utf-8')
-}, 10000)
 
-setInterval(function()
-{
-    file.copyFileSync(membersFilePath, membersBkpFilePath)
-}, 60000)
+},1000)
