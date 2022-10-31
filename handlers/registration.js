@@ -1,4 +1,4 @@
-const file = require("fs")
+const file = require("fs") 
 
 const membersFilePath = '../data/members.json'
 const membersBkpFilePath = '../data/members.json.bkp'
