@@ -5,12 +5,6 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-module.exports = {
-    ServeHTTP: () => {
-        app.listen({
-            port: 3000
-        })
-    }
-}
-
-module.exports.ServeHTTP()
+app.listen({
+    port: 3000
+})
