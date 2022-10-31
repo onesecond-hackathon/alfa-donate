@@ -1,2 +1,2 @@
-const client = require('handlers/client.js')
+const client = require('./handlers/client')
 client.ServeHTTP()
