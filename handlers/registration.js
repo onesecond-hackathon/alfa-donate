@@ -1,10 +1,9 @@
 const file = require("fs")
 
 const membersFilePath = '../data/members.json'
-const membersBkpFilePath = '../data/members.json.bkp'
 
-let members = file.readFileSync(membersFilePath, 'utf-8')
-members = JSON.parse(members)
+let members = JSON.parse(file.readFileSync(membersFilePath, 'utf-8'))
+let UpdatedMembers = false
 
 // Add sockets
 function NewMember(data)
@@ -19,15 +18,17 @@ function NewMember(data)
         member.password = tbl.password
 
         members.push(member)
+
+        UpdatedMembers = true
     }
 }
 
 setInterval(function()
 {
-    file.writeFileSync(membersFilePath, JSON.stringify(membersFilePath), 'utf-8')
+    if (UpdatedMembers)
+    {
+        file.writeFileSync(membersFilePath, JSON.stringify(membersFilePath), 'utf-8')
+        
+        UpdatedMembers = false
+    }
 }, 10000)
-
-setInterval(function()
-{
-    file.copyFileSync(membersFilePath, membersBkpFilePath)
-}, 60000)
