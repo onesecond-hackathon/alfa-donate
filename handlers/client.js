@@ -13,4 +13,4 @@ module.exports = {
     }
 }
 
-client.ServeHTTP()
+module.exports.ServeHTTP()
