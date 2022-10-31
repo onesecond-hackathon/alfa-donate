@@ -7,7 +7,7 @@ function SaveMember(member)
     // if (!members)
     //     members = file.file
 
-    file.writeFileSync(members,JSNO.parse(member))
+    file.writeFileSync(members,JSON.parse(member))
 }
 
 function NewMember(data)
