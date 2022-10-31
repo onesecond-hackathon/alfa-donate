@@ -9,6 +9,7 @@
   },
   "author": "One Second",
   "dependencies": {
+    "eta": "^1.12.3",
     "@fastify/static": "^6.5.0",
     "@fastify/view": "^7.1.1",
     "fastify": "^4.9.2"
