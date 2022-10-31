@@ -9,12 +9,14 @@
   },
   "author": "One Second",
   "dependencies": {
-    "eta": "^1.12.3",
     "@fastify/static": "^6.5.0",
     "@fastify/view": "^7.1.1",
-    "fastify": "^4.9.2"
+    "eta": "^1.12.3",
+    "fastify": "^4.9.2",
+    "socket.io": "^4.5.3"
   },
   "devDependencies": {
+    "eslint": "^8.26.0",
     "nodemon": "^2.0.20"
   },
   "license": "AGPL-3.0-or-later"
