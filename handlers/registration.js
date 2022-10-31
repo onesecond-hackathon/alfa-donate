@@ -3,7 +3,7 @@ const file = require("fs")
 
 const membersFilePath = '../data/members.json'
 
-let members = JSON.parse(file.readFileSync(membersFilePath, 'utf-8'))
+// let members = JSON.parse(file.readFileSync(membersFilePath, 'utf-8'))
 let UpdatedMembers = false
 
 // Add sockets
