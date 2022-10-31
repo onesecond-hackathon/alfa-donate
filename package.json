@@ -1,0 +1,11 @@
+{
+  "name": "alfa-donate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "One Second",
+  "license": "AGPL-3.0-or-later"
+}
