@@ -1,3 +1,4 @@
-const client = require('./handlers/client')
-client.ServeHTTP()
+const client = require("./handlers/client")
+const thread = new Worker("handlers/client.js")
 
+console.log(thread)
