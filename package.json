@@ -2,7 +2,7 @@
   "name": "alfa-donate",
   "version": "1.0.0",
   "description": "",
-  "main": "serve.js",
+  "main": "main.js",
   "scripts": {
     "start": "node .",
     "dev": "nodemon ."
