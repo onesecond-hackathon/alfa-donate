@@ -1,3 +1,4 @@
+const ws = require("socket.io")
 const file = require("fs")
 
 const membersFilePath = '../data/members.json'
@@ -28,7 +29,7 @@ setInterval(function()
     if (UpdatedMembers)
     {
         file.writeFileSync(membersFilePath, JSON.stringify(membersFilePath), 'utf-8')
-        
+
         UpdatedMembers = false
     }
 }, 10000)
