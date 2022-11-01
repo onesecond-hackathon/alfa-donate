@@ -7,7 +7,11 @@ function ProcessDonate(donateinfo)
 
 function OnPayment(data)
 {
-    CachedDonates[CachedDonates.length] = data
+    let tbl = JSON.parse(data)
+
+    // if ()
+
+    CachedDonates[CachedDonates.length] = tbl
 }
 
 setInterval(function() {
