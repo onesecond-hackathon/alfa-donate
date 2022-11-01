@@ -13,14 +13,17 @@ function NewMember(data)
 
     if (tbl.login && tbl.password)
     {
-        let member = {}
+        if (!members[tbl.login])
+        {
+            members[tbl.login] = tbl.password
 
-        member.login = tbl.login
-        member.password = tbl.password
+            // member.login = tbl.login
+            // member.password = tbl.password
 
-        members.push(member)
+            // members.push(member)
 
-        UpdatedMembers = true
+            UpdatedMembers = true
+        }
     }
 }
 
